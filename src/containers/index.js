@@ -128,9 +128,8 @@ class indexMain extends Component {
       return (
         <div >
           <div className="Keys">
-            KEY:
-             <div className="key1" /> Occupied Seat
-             <div className="key2" /> Unoccupied Seat
+            <div className="key1" /> Unoccupied Seat
+             <div className="key2" /> Occupied Seat
           </div>
           <div className="First" >{this.state.first} </div>
           <div className="business">{this.state.business} </div>
