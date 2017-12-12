@@ -15,10 +15,14 @@ class indexMain extends Component {
       economy: null,
       isComplete: false,
       isClicked: false,
+      renderingFirst: false,
+
     };
 
     this.onUpdate = this.onUpdate.bind(this);
     this.onRenderFirst = this.onRenderFirst.bind(this);
+    this.onRenderBusiness = this.onRenderBusiness.bind(this);
+    this.onRenderEconomy = this.onRenderEconomy.bind(this);
     this.getMessage = this.getMessage.bind(this);
     this.updateElement = this.updateElement.bind(this);
   }
@@ -50,7 +54,43 @@ class indexMain extends Component {
             if (temp1[j].props.className === 'Unoccupied') {
               const m = (<div className="updatedDiv" onClick={() => this.getMessage(this)} >
                 {this.state.first[i].props.children[j].props.children} </div>);
-              this.state.first[i].props.children[j] = this.updateElement(m, i, j);
+              this.state.first[i].props.children[j] = this.updateElement(m, i, j, 'first');
+            }
+          }
+        }
+      }
+    }
+  }
+
+  onRenderBusiness() {
+    if (this.state.isComplete) {
+      const temp = this.state.business;
+      for (let i = 0; i < temp.length; i++) {
+        if (temp[i].props.children !== 'AISLES') {  // to eliminate aisles
+          const temp1 = temp[i].props.children;
+          for (let j = 0; j < temp1.length; j++) {
+            if (temp1[j].props.className === 'Unoccupied') {
+              const m = (<div className="updatedDiv" onClick={() => this.getMessage(this)} >
+                {this.state.business[i].props.children[j].props.children} </div>);
+              this.state.business[i].props.children[j] = this.updateElement(m, i, j, 'business');
+            }
+          }
+        }
+      }
+    }
+  }
+
+  onRenderEconomy() {
+    if (this.state.isComplete) {
+      const temp = this.state.economy;
+      for (let i = 0; i < temp.length; i++) {
+        if (temp[i].props.children !== 'AISLES') {  // to eliminate aisles
+          const temp1 = temp[i].props.children;
+          for (let j = 0; j < temp1.length; j++) {
+            if (temp1[j].props.className === 'Unoccupied') {
+              const m = (<div className="updatedDiv" onClick={() => this.getMessage(this)} >
+                {this.state.economy[i].props.children[j].props.children} </div>);
+              this.state.economy[i].props.children[j] = this.updateElement(m, i, j, 'economy');
             }
           }
         }
@@ -68,11 +108,11 @@ class indexMain extends Component {
     }
   }
 
-  updateElement(m, i, j) {
+  updateElement(m, i, j, category) {
     if (this.state.isClicked === false) {
       return m;
     } else {
-      m = (<div className="Occupied"> {this.state.first[i].props.children[j].props.children} </div>);
+      m = (<div className="Occupied"> {this.state.category[i].props.children[j].props.children} </div>);
       return m;
     }
   }
@@ -82,6 +122,8 @@ class indexMain extends Component {
     if (this.props.seats.length > 0) {
       this.onUpdate();
       this.onRenderFirst();
+      this.onRenderBusiness();
+      this.onRenderEconomy();
 
       return (
         <div >
