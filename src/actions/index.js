@@ -1,21 +1,12 @@
+import seats from '../data/seats.json';
 
-// keys for actiontypes
 export const ActionTypes = {
-  INCREMENT: 'INCREMENT',
-  DECREMENT: 'DECREMENT',
+  FETCH_SEATS: 'FETCH_SEATS',
 };
 
-
-export function increment() {
+export function fetchSeats() {
   return {
-    type: ActionTypes.INCREMENT,
-    payload: null,
-  };
-}
-
-export function decrement() {
-  return {
-    type: ActionTypes.DECREMENT,
-    payload: null,
+    type: 'FETCH_SEATS',
+    payload: seats,
   };
 }
