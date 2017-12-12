@@ -1,3 +1,8 @@
+
+Seat Map link:    http://lolaseatmap.surge.sh/
+
+
+
 # lolaSeatMap
 
 #App Navigation
@@ -16,4 +21,4 @@
 -Used a react/redux framework.
 -The seat map is generated from the data/json file.
 -The main constituents of the app include an action folder, compnent folder, container folder and the reducers folder, which follor the react/redux framework
--i've included a seperate folder called Helper utility Methods which helps to generate the seatmap. Props from the json data are passed into these methods, to generate the desired states which are the usued in the seatmap.
+-i've included a seperate folder called Helper utility Methods which helps to generate the seatmap. Props from the json data are passed into these methods, to generate the desired states which are the used in the seatmap.
