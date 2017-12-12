@@ -1,56 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-import { Switch } from 'react-router';
-import Counter from '../containers/counter';
-import Controls from '../containers/Controls';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import NavBar from './NavBar';
+import indexMain from '../containers/index';
 
-
-// import './src/style.scss';
-
-const Nav = (props) => {
-  return (
-    <nav>
-      <ul>
-        <li><NavLink to="/" exact>Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/test/id1">test id1</NavLink></li>
-        <li><NavLink to="/test/id2">test id2</NavLink></li>
-      </ul>
-    </nav>
-  );
-};
-
-const About = (props) => {
-  return <div> All there is to know about me </div>;
-};
-const Welcome = (props) => {
-  return (<div>Welcome
-    <Counter />
-    <Controls />
-  </div>);
-};
-
-const Test = (props) => {
-  return <div> ID: {props.match.params.id} </div>;
-};
 
 const FallBack = (props) => {
   return <div>URL Not Found</div>;
+};
+
+const enterApp = (props) => {
+  return <div> <Link to="/seats"> Enter here</Link></div>;
 };
 
 const App = (props) => {
   return (
     <Router>
       <div>
-        <Nav />
+        <NavBar />
         <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route path="/about" component={About} />
-          <Route exact path="/test/:id" component={Test} />
+          <Route exact path="/" component={enterApp} />
+          <Route exact path="/seats" component={indexMain} />
           <Route component={FallBack} />
         </Switch>
       </div>
     </Router>
+
   );
 };
 
