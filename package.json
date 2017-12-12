@@ -9,8 +9,7 @@
     "build": "SET WEBPACK_ENV=production & webpack --colors",
     "clean": "rimraf public/build",
     "deploy": "npm run build & gh-pages -d public & npm run clean",
-    "surge": "npm run build & surge -p public -d clemnyan.surge.sh & npm run clean"
-
+    "surge": "npm run build & surge -p public -d lolaSeatMap.surge.sh & npm run clean"
   },
   "repository": {
     "type": "git",
@@ -59,6 +58,7 @@
     "redux-devtools": "^3.4.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
+    "surge": "^0.19.0",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
   }
