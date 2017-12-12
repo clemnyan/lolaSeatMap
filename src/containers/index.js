@@ -43,7 +43,7 @@ class indexMain extends Component {
     }
   }
 
-
+// on rendering the first class
   onRenderFirst() {
     if (this.state.isComplete) {
       const temp = this.state.first;
@@ -62,6 +62,7 @@ class indexMain extends Component {
     }
   }
 
+// on rendering the business class
   onRenderBusiness() {
     if (this.state.isComplete) {
       const temp = this.state.business;
@@ -80,6 +81,7 @@ class indexMain extends Component {
     }
   }
 
+// on rendering the economy class
   onRenderEconomy() {
     if (this.state.isComplete) {
       const temp = this.state.economy;
@@ -98,7 +100,7 @@ class indexMain extends Component {
     }
   }
 
-
+// function called after onclick event
   getMessage() {
     if (confirm('DO YOU WANT TO SELECT THIS SEAT!') === true) {
       alert('SEAT SELECTION SUCCESSFUL');
@@ -108,6 +110,9 @@ class indexMain extends Component {
     }
   }
 
+/* Function to update state once clicked so that color of the clicked seat changes to green as defined by the classname. However,
+this apprach seem not to work. Tried other methods and havent worked but with more time i'm sure I can figure out the problem
+*/
   updateElement(m, i, j, category) {
     if (this.state.isClicked === false) {
       return m;
