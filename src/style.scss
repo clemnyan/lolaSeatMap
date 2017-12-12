@@ -1,8 +1,102 @@
 body {
   font-family: "Roboto", sans-serif;
-  background: darken(blue, 0.2);
+  background-color: hsl(82, 59%, 75%);
 }
 
+.Unoccupied {
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  border: 3px solid brown;
+}
+
+.Occupied {
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: hsl(82, 59%, 39%);;
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  border: 3px solid hsl(82, 59%, 39%);;
+}
+
+.updatedDiv{
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  border: 3px solid brown;
+}
+
+.Unoccupied:hover {
+  background-color: red   ;
+}
+
+.updatedDiv:hover {
+  background-color: red;
+}
+
+.updatedDiv:active {
+  background-color: orange;
+}
+
+.aisle {
+  padding-right: 10px;
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 20px;
+  background-color: BlanchedAlmond ;
+}
+
+.headings {
+  padding-top: 60px;
+  padding-right: 15px;
+  padding-left: 35px;
+  display: flex;
+  justify-content: center;
+  background-color: BlanchedAlmond ;
+
+}
+
+.singlePosts {
+  width: 70px;
+  height: auto;
+}
 .active {
   color: pink;
+}
+
+.First {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.business {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Economy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
