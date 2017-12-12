@@ -9,6 +9,18 @@
         "strict": 0,
         "quotes": [2, "single"],
         "no-else-return": 0,
+        'jsx-a11y/no-static-element-interactions': [
+            0,
+            {
+              handlers: [
+                'onMouseDown',
+                'onMouseUp',
+                'onKeyPress',
+                'onKeyDown',
+                'onKeyUp',
+              ],
+            },
+          ],
         "no-console": 0,
         "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
         "no-underscore-dangle": 0,
@@ -22,6 +34,14 @@
         "react/react-in-jsx-scope": 2,
         "react/prop-types": 0,
         "new-cap": 0,
+        "no-plusplus":0,
+        "react/no-danger":0,
+        "no-shadow":0,
+        "no-alert": 0,
+        "react/jsx-no-duplicate-props":0,
+        "no-param-reassign": 0,
+        "no-prototype-builtins": 0,
+        "react/no-array-index-key": 0,
         "react/jsx-first-prop-new-line": 0,
          "jsx-a11y/label-has-for": [ 0, {
             "components": [ "Label" ],
