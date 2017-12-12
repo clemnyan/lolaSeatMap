@@ -5,7 +5,7 @@ import { } from 'react-router-dom';
 const NavBar = (props) => {
   return (
     <nav>
-      <div className="NAV">Welcome to App: Lola Seats</div>
+      <div className="NAV">Welcome to your App: Lola Seats</div>
     </nav>
   );
 };

@@ -9,7 +9,7 @@ const FallBack = (props) => {
 };
 
 const enterApp = (props) => {
-  return <div> <Link to="/seats"> Enter here</Link></div>;
+  return <div className="firstPage"> <div> <Link to="/seats"> CLICK HERE TO FIND SEATS </Link></div></div>;
 };
 
 const App = (props) => {
